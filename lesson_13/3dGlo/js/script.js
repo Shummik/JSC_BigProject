@@ -11,7 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
     const getTimeRemaining = () => {
       let dateStop = new Date(deadline).getTime(),
         dateNow = new Date().getTime(),
-        timeRemaining = (dateStop - dateNow) / 1000,
+        // timeRemaining = (dateStop - dateNow) / 1000,        
+        timeRemaining = (dateStop >= dateNow ? (dateStop - dateNow) / 1000 : 0),
         seconds = Math.floor(timeRemaining % 60),
         minutes = Math.floor((timeRemaining / 60) % 60),
         hours = Math.floor(timeRemaining / 60 / 60);
@@ -44,8 +45,8 @@ window.addEventListener('DOMContentLoaded', () => {
     setInterval(countDown, 1000);
   };
 
-  // countTimer('19 september 2019');
-  countTimer('29 september 2019');
+  countTimer('19 september 2019');
+  // countTimer('29 september 2019');
 
   // burger menu
   const toggleMenu = () => {
