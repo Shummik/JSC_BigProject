@@ -23,9 +23,9 @@ function currentDay() {
   }
   hello.textContent = hi;
   toDay.textContent = `Сегодня: ${arrDay[date.getDay()-1]}`;
-  currentTime.textContent = `Текущее время: ${((date.getHours() % 12) < 12 ? 
-    '0'+(date.getHours() % 12) : date.getHours() % 12) + 
-  ':' + date.getMinutes() + ':' + date.getSeconds() + ' ' + (date.getHours() >= 12 ? 'PM' : 'AM')}`;
+  currentTime.textContent = `Текущее время: ${("0" + date.getDate() % 12).slice(-2) + 
+  ':' + ("0" + date.getMinutes()).slice(-2) + ':' + ("0" + date.getSeconds()).slice(-2) +
+   ' ' + (date.getHours() >= 12 ? 'PM' : 'AM')}`;
   year.textContent = `До нового года осталось ${day} дней`;
 }
 currentDay();
