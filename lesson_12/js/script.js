@@ -2,7 +2,7 @@
 
 let date = new Date(),
   newYear = new Date('December 31 2019'),
-  dateNow = new Date().getTime(),
+  dateNow = Date.now(),
   arrDay = ['Понедельник', 'Вторник', 'Среда', 'Четверг', 'Пятница', 'Суббота', 'Воскресенье'],
   day = Math.floor(((newYear - dateNow) / 1000) / 60 / 60 / 24),
   hello = document.querySelector('.hello'),
@@ -29,3 +29,4 @@ function currentDay() {
   year.textContent = `До нового года осталось ${day} дней`;
 }
 currentDay();
+
