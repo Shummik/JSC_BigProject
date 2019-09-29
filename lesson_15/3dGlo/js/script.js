@@ -448,17 +448,26 @@ window.addEventListener('DOMContentLoaded', () => {
       const carousel = new SliderCarousel(options);
   
       carousel.init();
-      
+
+    //  Маска ввода в калькуляторе
       const calc = () => {
           let calcInput = document.querySelectorAll('input[type="number"]');
-          calcInput.forEach((elem) => {
-              if(elem.value != /\d/) {
-                  elem.value.replace(/[a-z]/i, '');
-              }
-          });
+        //   calcInput.forEach((elem) => {
+        //     if(elem.value !== /\D/g) {
+        //         elem.value.replace(/\D/g, '');
+        //     }
+        // });
+        // Только так пока получилось( вариант выше так и пропускает е и знаки) 
+        // также в нижее изложенном варианте он сбрасывает при нажатии на <- символы
+        calcInput.forEach((elem) => {
+            elem.addEventListener('input', () => {
+                elem.value = elem.value.replace(/\D/g, '');
+            });
+        });
       };
       calc();
-  
+
+    // Замена фотографии при наведении  
       const comand = () => {
           let imgs = document.querySelectorAll('.command__photo');
           
