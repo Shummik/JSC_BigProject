@@ -108,10 +108,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
   togglePopUp();
 
-  // Кусок кода который почемуто не работает
-  // аналогичная ситуация с в меню
-  // причем не важно есть ли у ссылки якорь типа (href="#service-block") или нет
-
+  // Плавный скрол вниз по нажатию на кнопку (не работает вместе с якорем)
   const scrollDown = () => {
     const scrollBtn = document.querySelector('main > a');
 
@@ -123,20 +120,4 @@ window.addEventListener('DOMContentLoaded', () => {
     });
   };
   scrollDown();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 });
