@@ -451,14 +451,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //  Маска ввода в калькуляторе
       const calc = () => {
-          let calcInput = document.querySelectorAll('input[type="number"]');
-        //   calcInput.forEach((elem) => {
-        //     if(elem.value !== /\D/g) {
-        //         elem.value.replace(/\D/g, '');
-        //     }
-        // });
-        // Только так пока получилось( вариант выше так и пропускает е и знаки) 
-        // также в нижее изложенном варианте он сбрасывает при нажатии на <- символы
+          let calcInput = document.querySelectorAll('.calc-block>input');
+
         calcInput.forEach((elem) => {
             elem.addEventListener('input', () => {
                 elem.value = elem.value.replace(/\D/g, '');
