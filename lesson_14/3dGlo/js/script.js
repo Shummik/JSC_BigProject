@@ -40,10 +40,9 @@ window.addEventListener('DOMContentLoaded', () => {
         countTimer();
     
         function toggleMenu() {
-            let menu = document.querySelector('menu'),
-                body = document.querySelector('body');
+            let menu = document.querySelector('menu');
     
-            body.addEventListener('click', (event) => {
+            document.addEventListener('click', (event) => {
                 let target = event.target;
                     if (target.closest('.menu')) {
                         menu.classList.add('active-menu');
