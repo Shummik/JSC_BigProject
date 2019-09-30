@@ -190,14 +190,14 @@ window.addEventListener('DOMContentLoaded', () => {
               let ulDots = document.querySelector('.portfolio-dots'),
                   dots;
               
-            //   for (let i = 0; i <= slide.length - 1; i++){
-            //       dots = document.createElement('li');
-            //       dots.classList.add('dot');
-            //       if (i === 0 ){
-            //           dots.classList.add('dot-active');
-            //       }
-            //       ulDots.appendChild(dots);
-            //   } Зря сделал
+              for (let i = 0; i <= slide.length - 1; i++){
+                  dots = document.createElement('li');
+                  dots.classList.add('dot');
+                  if (i === 0 ){
+                      dots.classList.add('dot-active');
+                  }
+                  ulDots.appendChild(dots);
+              }
               
               dot = document.querySelectorAll('.dot');
           };
