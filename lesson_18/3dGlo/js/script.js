@@ -35,6 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
                     clearInterval(time);
                 }
             }
+            getTimeRemaining();
             let time = setInterval(updateClock, 1000);   
         }
         countTimer();
