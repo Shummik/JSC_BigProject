@@ -108,7 +108,8 @@ class Validator{
             this.pattern.email = /^\w+@\w+\.\w{2,}$/;
         }
         if (!this.pattern.rus){
-            this.pattern.rus = /^\W[^\.\,\!\?-_+=*\(\)]+$/;
+            this.pattern.rus = /^[А-ЯЁ][а-яё]*$/;
+            // /^\W[^\.\,\!\?-_+=*\(\)]+$/
         }
     }
 }
