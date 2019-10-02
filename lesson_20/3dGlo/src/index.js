@@ -1,0 +1,34 @@
+'use strict';
+
+import countTimer from './modules/countTimer';
+import toggleMenu from './modules/toggleMenu';
+import movePage from './modules/movePage';
+import showPopup from './modules/showPopup';
+import tabs from './modules/tabs';
+import slider from './modules/slider';
+import sliderCarousel from './modules/sliderCarousel';
+import calc from './modules/calc';
+import comand from './modules/comand';
+import sendForm from './modules/sendForm';
+import validator from '../plugins/validator/validator';
+
+// Таймер
+countTimer();
+// Меню
+toggleMenu();
+// Анимация
+movePage();
+// Popup
+showPopup();
+// Табы
+tabs();
+// Слайдер
+slider();
+// Карусель
+sliderCarousel();
+// Калькулятор
+calc();
+// Смена фото по наведению
+comand();
+// Отправка формы
+sendForm();
