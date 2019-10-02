@@ -1,5 +1,13 @@
 'use strict';
 
+import 'nodelist-foreach-polyfill';
+import "@babel/polyfill";
+import elementClosest from 'element-closest';
+elementClosest(window);
+import 'formdata-polyfill';
+import 'es6-promise';
+import 'fetch-polyfill';
+
 import countTimer from './modules/countTimer';
 import toggleMenu from './modules/toggleMenu';
 import movePage from './modules/movePage';
@@ -12,6 +20,8 @@ import comand from './modules/comand';
 import sendForm from './modules/sendForm';
 import validator from '../plugins/validator/validator';
 
+// Валидатор
+validator();
 // Таймер
 countTimer();
 // Меню
@@ -31,4 +41,6 @@ calc();
 // Смена фото по наведению
 comand();
 // Отправка формы
-sendForm();
+sendForm('#form1');
+sendForm('#form2');
+sendForm('#form3');
